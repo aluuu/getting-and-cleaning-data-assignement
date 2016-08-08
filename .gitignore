@@ -1,3 +1,4 @@
 *.table
 data/*
-*.ipynb
+.Rhistory
+.ipynb_checkpoints
