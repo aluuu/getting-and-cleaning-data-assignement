@@ -1,15 +1,16 @@
-
-install.packages("dplyr")
+if (!require("dplyr")) {
+    install.packages("dplyr", quite=T, repos="http://cran.rstudio.com/")
+}
 library(dplyr)
 
-if(!dir.exists("./data")){ 
+if(!dir.exists("./data")){
     dir.create("./data")
 }
 
 dataset_archive <- "./data/UCI_HAR_Dataset.zip"
 if(!file.exists(dataset_archive)){
     download.file(url="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", destfile = dataset_archive)
-    unzip(zipfile = dataset_archive, exdir = "./data/")    
+    unzip(zipfile = dataset_archive, exdir = "./data/")
 }
 
 # Read test data set

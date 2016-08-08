@@ -18,3 +18,9 @@ Script will create two datasets:
 You could quickly examine results with:
 
 `data <- read.table("step5_data.table", header=T)`
+
+## Running script
+
+You could run script either via RStudio or with CLI R.
+
+`R -f run_analysis.r`
